@@ -963,3 +963,127 @@
 // SEE video 
 
 // there are only multiple choice questions make your command on them.
+
+
+
+
+
+
+
+
+
+
+
+
+
+//Q1)
+
+// Print the sum, difference and product of two complex numbers by creating a
+// class named 'Complex' with separate methods for each operation whose real and imaginary
+// parts are entered by the user.
+
+
+// import java.util.*;
+// public class classes_objects{
+//     public static void main(String args[]){
+
+//         Scanner sc = new Scanner (System.in);
+
+//         Complex c1 = new Complex();
+//         Complex c2 = new Complex();
+
+//         c1.real = sc.nextInt();
+//         c1.img = sc.nextInt();
+//         c2.real = sc.nextInt();
+//         c2.img = sc.nextInt();
+
+//         c1.sum(c2);
+//         c1.difference(c2);
+//         c1.product(c2);
+
+//     }
+// }
+// class Complex{
+//     int real;
+//     int img;
+
+//     void sum(Complex c){
+
+//         int real1 = this.real + c.real;
+//         int img1 = this.img + c.img;
+//         System.out.println("SUM IS: " + real1 +"+" + img1 +"i");
+
+//     }
+//     void difference(Complex c){
+
+//         int real1 = this.real - c.real;
+//         int img1 = this.img - c.img;
+//         System.out.println("DIFFERENCE IS: " + real1  +"+"+ img1 +"i");
+        
+//     }
+
+//     void product(Complex c){
+//         int real1 = ((this.real*c.real) - (this.img*c.img));
+//         int img1 = ((this.real * c.img ) - (this.real * c.real));
+//         System.out.println("PRODUCT IS: " + real1  +"+"+ img1 +"i");
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Q2). What is the output of the following program.
+
+// B. Driving electric car
+// The drive() method in the Car class does not override the version in the Automobile class
+// since the method is not visible to the Car class.
+// The drive() method in the ElectricCar class is a valid override of the method in the Car class,
+// with the access modifier expanding in the subclass. For these reasons, the code compiles,
+// and Option D is incorrect.
+// In the main() method, the object created is an ElectricCar, even if it is assigned to a Car
+// reference. Due to polymorphism, the method from the ElectricCar will be invoked, making
+// Option B the correct answer
+
+
+
+
+
+
+
+
+
+
+//Q3). 
+
+// B. public and protected both can be used.
+// You can provide only a less restrictive or same-access modifier when overriding a method.
+
+
+
+
+
+
+
+
+//Q4 ).
+
+// Rule to remember
+
+// For object creation, the order is:
+
+// Superclass static blocks (once)
+// Subclass static blocks (once)
+// Superclass instance initializer blocks
+// Superclass constructor body
+// Subclass instance initializer blocks
+// Subclass constructor body
