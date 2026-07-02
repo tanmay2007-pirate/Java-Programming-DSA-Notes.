@@ -8,6 +8,7 @@
 //     public static void main(String args[]){
 
 
+
 //         // Declaration 
 //         char arr[] = {'a','b','c','d'};
 
