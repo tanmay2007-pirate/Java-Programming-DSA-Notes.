@@ -269,92 +269,167 @@
 
 
 
+// public class Sorting_algo{
+
+//     public static void print_arr(int arr []){
+//         for(int i = 0 ; i <  arr.length ; i++){
+//             System.out.print(arr[i] +" ");
+//         }
+//         System.out.println();
+
+//     }
+
+//     public static void merge(int arr[] , int si , int mid , int ei){
+
+//         int temp[] = new int [ei - si +1];
+
+//         int i = si; // iterator for left part
+
+//         int j = mid + 1; // iteratir for right part
+
+//         int k = 0;  // iterator for temp arr
+
+
+//         while( i <= mid && j <= ei){
+
+//             if(arr[i] < arr[j]){
+//                 temp[k] = arr[i];
+//                 i++;
+                
+//             }else{
+//                 temp[k] = arr[j];
+//                 j++;
+//             }
+//             k++;
+//         }
+
+
+//         // left part , for leftover elements.
+//         while( i <= mid){
+//             temp[k++] = arr[i++];
+//         }
+
+//         // right part 
+
+//         while( j <= ei){
+//             temp[k++] = arr[j++];
+//         }
+
+
+//         // copy temp to original arr
+
+//         for( k = 0 ,i = si ; k < temp.length ; i++ , k++){
+
+//             arr[i] = temp [k];
+//         }
+
+
+//     }
+//     public static void merge_sort(int arr [] , int si , int ei){
+
+//         if(si >= ei){
+//             return;
+//         }
+
+//         // kaam 
+
+//         int mid = si + (ei -si) / 2;
+
+//         merge_sort(arr , si , mid); // left part
+
+//         merge_sort(arr , mid+1 , ei); // right part
+
+//         merge(arr , si , mid , ei);
+
+
+
+//     }
+//     public static void main(String args[]){
+
+//         int arr [] = {6,3,9,5,2,8};
+
+//         merge_sort(arr , 0 ,arr.length -1);
+
+//         print_arr(arr);
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// QUICK SORT.
+
+
 public class Sorting_algo{
 
-    public static void print_arr(int arr []){
-        for(int i = 0 ; i <  arr.length ; i++){
-            System.out.print(arr[i] +" ");
-        }
-        System.out.println();
 
-    }
-
-    public static void merge(int arr[] , int si , int mid , int ei){
-
-        int temp[] = new int [ei - si +1];
-
-        int i = si; // iterator for left part
-
-        int j = mid + 1; // iteratir for right part
-
-        int k = 0;  // iterator for temp arr
+    public static void quick_sort(int arr [] , int si , int ei){
 
 
-        while( i <= mid && j <= ei){
-
-            if(arr[i] < arr[j]){
-                temp[k] = arr[i];
-                i++;
-                
-            }else{
-                temp[k] = arr[j];
-                j++;
-            }
-            k++;
-        }
-
-
-        // left part , for leftover elements.
-        while( i <= mid){
-            temp[k++] = arr[i++];
-        }
-
-        // right part 
-
-        while( j <= ei){
-            temp[k++] = arr[j++];
-        }
-
-
-        // copy temp to original arr
-
-        for( k = 0 ,i = si ; k < temp.length ; i++ , k++){
-
-            arr[i] = temp [k];
-        }
-
-
-    }
-    public static void merge_sort(int arr [] , int si , int ei){
 
         if(si >= ei){
             return;
         }
-
-        // kaam 
-
-        int mid = si + (ei -si) / 2;
-
-        merge_sort(arr , si , mid); // left part
-
-        merge_sort(arr , mid+1 , ei); // right part
-
-        merge(arr , si , mid , ei);
-
+        // last element
+        int pidx = partition(arr ,si ,ei);
+        
+        quick_sort(arr , si , pidx -1 ); // left
+        quick_sort(arr , pidx +1 , ei); // right
 
 
     }
-    public static void main(String args[]){
 
-        int arr [] = {6,3,9,5,2,8};
+    public static int partition(int arr[] , int si , int ei){
 
-        merge_sort(arr , 0 ,arr.length -1);
+        int pivot = arr[ei];
 
-        print_arr(arr);
+        int i = si - 1 ;        //to make place for else smaller than pivot.
+
+        for(int j = si ; j < ei ; j++){
+            if(arr[j] <= pivot){
+                i++;
+                // swap
+                int temp = arr[j];
+                arr[j] = arr[i];
+                arr[i] = temp ;
+
+            }
+        }
+        
+        i++;
+        int temp = pivot ;
+        arr[ei] = arr[i];
+        arr[i] = temp ;
+
+        return i;
+
+
+    }
+    public static void main (String args[]){
+
+        int arr[] = {6,3,9,8,2,5};
+
+        quick_sort(arr , 0 , arr.length - 1);
+        for (int i = 0 ; i < arr.length  ; i++){
+            System.out.print(arr[i]+" ");
+        }
+        System.out.println();
+
     }
 }
-
-
-
-
-
