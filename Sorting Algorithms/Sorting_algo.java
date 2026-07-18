@@ -376,60 +376,135 @@
 // QUICK SORT.
 
 
-public class Sorting_algo{
+// public class Sorting_algo{
 
 
-    public static void quick_sort(int arr [] , int si , int ei){
+//     public static void quick_sort(int arr [] , int si , int ei){
 
 
 
-        if(si >= ei){
-            return;
-        }
-        // last element
-        int pidx = partition(arr ,si ,ei);
+//         if(si >= ei){
+//             return;
+//         }
+//         // last element
+//         int pidx = partition(arr ,si ,ei);
         
-        quick_sort(arr , si , pidx -1 ); // left
-        quick_sort(arr , pidx +1 , ei); // right
+//         quick_sort(arr , si , pidx -1 ); // left
+//         quick_sort(arr , pidx +1 , ei); // right
 
 
-    }
+//     }
 
-    public static int partition(int arr[] , int si , int ei){
+//     public static int partition(int arr[] , int si , int ei){
 
-        int pivot = arr[ei];
+//         int pivot = arr[ei];
 
-        int i = si - 1 ;        //to make place for else smaller than pivot.
+//         int i = si - 1 ;        //to make place for else smaller than pivot.
 
-        for(int j = si ; j < ei ; j++){
-            if(arr[j] <= pivot){
-                i++;
-                // swap
-                int temp = arr[j];
-                arr[j] = arr[i];
-                arr[i] = temp ;
+//         for(int j = si ; j < ei ; j++){
+//             if(arr[j] <= pivot){
+//                 i++;
+//                 // swap
+//                 int temp = arr[j];
+//                 arr[j] = arr[i];
+//                 arr[i] = temp ;
 
-            }
-        }
+//             }
+//         }
         
-        i++;
-        int temp = pivot ;
-        arr[ei] = arr[i];
-        arr[i] = temp ;
+//         i++;
+//         int temp = pivot ;
+//         arr[ei] = arr[i];
+//         arr[i] = temp ;
 
-        return i;
+//         return i;
 
 
-    }
-    public static void main (String args[]){
+//     }
+//     public static void main (String args[]){
 
-        int arr[] = {6,3,9,8,2,5};
+//         int arr[] = {6,3,9,8,2,5};
 
-        quick_sort(arr , 0 , arr.length - 1);
-        for (int i = 0 ; i < arr.length  ; i++){
-            System.out.print(arr[i]+" ");
-        }
-        System.out.println();
+//         quick_sort(arr , 0 , arr.length - 1);
+//         for (int i = 0 ; i < arr.length  ; i++){
+//             System.out.print(arr[i]+" ");
+//         }
+//         System.out.println();
 
-    }
-}
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Search in a Rotated SORTED Array
+
+
+// public class Sorting_algo{
+
+//     public static int search(int arr[] , int tar, int si , int ei){
+
+//         if(si > ei){
+//             return -1;
+//         }
+
+//         //kaam
+//         int mid = si + (ei - si)/ 2 ;
+
+//         // case found
+
+//         if(arr[mid] == tar){
+//             return mid;
+//         }
+
+//         // mid on l1
+//         if(arr[si] <= arr[mid]){
+
+//             // case a:
+//             if(arr[si] <= tar && tar <= arr[mid]){
+//                 return search (arr , tar , si ,mid-1);
+//             }else{
+//                 // case b :
+//                 return search(arr , tar , mid+1 , ei);
+//             }
+
+
+//         }
+
+
+//         //mid on l2
+//         else{
+//             // case c: 
+
+//             if(arr[mid] <= tar && tar <= arr[ei]){
+//                 return search(arr ,tar , mid+1,ei);
+//             }
+//             else{
+//                 return search(arr , tar , si , mid-1);
+//             }
+
+//         }
+
+      
+//     }
+//     public static void main (String args[]){
+
+//         int arr [] = {4,5,6,7,0,1,2};
+
+
+//         System.out.println(search(arr , 0 , 0 , arr.length));
+
+//     }
+// }

@@ -29,6 +29,8 @@
 
 //         System.out.print(name);
 
+//          // for converting char array into string do : return  new String(arr);
+
 
 //     }
 // }
@@ -240,7 +242,7 @@
 //         String s3 = new String("Tony");
 
 
-//         if(s1 == s2){
+//         if(s1 == s3){
 //             System.out.println("Strings are equal");
 //         }else{
 //             System.out.println("Strings are not equal");
