@@ -1,28 +1,21 @@
 
+interface Animal{
+    void walk();
+   
 
-abstract class Animal{
-
-    abstract void walk();
-
-    
 }
 
-class Horse extends Animal{
+interface herbivore{
+
+
+}
+
+class Horse implements Animal , herbivore{
 
     public void walk(){
         System.out.println("walks on 4 legs");
     }
-    
-
 }
-
-class Chicken extends Animal{
-
-    public void walk(){
-        System.out.println("Walks on 2 legs");
-    }
-}
-
 
 public class hollow {
     public static void main (String args[]){
