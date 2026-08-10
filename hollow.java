@@ -1,32 +1,11 @@
 
-interface Animal{
-    void walk();
-   
 
-}
+public class hollow{
+    public static void main(String args[]){
 
-interface herbivore{
+        System.out.print("Hello");
+        System.out.print(" World");
+        System.out.println();
 
-
-}
-
-class Horse implements Animal , herbivore{
-
-    public void walk(){
-        System.out.println("walks on 4 legs");
-    }
-}
-
-public class hollow {
-    public static void main (String args[]){
-
-        
-        Horse horse = new Horse();
-
-
-        horse.walk();
-
-      
-        
     }
 }

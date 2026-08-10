@@ -172,7 +172,7 @@ public class Main{
                 board[row][j] = 'Q';
                 if(queens_one_solution(board , row+1)){
                     return true;
-                };  // function call
+                }  // function call
                 board[row][j] = '.';    // backtracking step
             }
         }
