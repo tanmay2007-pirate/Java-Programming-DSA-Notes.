@@ -504,61 +504,119 @@
 // Pair sum 2 - ( Sorted & rotated Array ) 
 // Tc =  O(n).
 
-import java.util.*;
-public class Main{
+// import java.util.*;
+// public class Main{
 
-    public static boolean pairsum2(ArrayList<Integer> list , int target){
+//     public static boolean pairsum2(ArrayList<Integer> list , int target){
 
-        int n = list.size();
-        int bp = -1;
-        for(int i = 0 ; i < list.size() ; i++){
-            if(list.get(i) > list.get(i+1)){
-                bp = i;
-                break;
-            }
+//         int n = list.size();
+//         int bp = -1;
+//         for(int i = 0 ; i < list.size() ; i++){
+//             if(list.get(i) > list.get(i+1)){
+//                 bp = i;
+//                 break;
+//             }
 
-        }
+//         }
 
-        int lp = bp+1;
-        int rp = bp;
+//         int lp = bp+1;
+//         int rp = bp;
 
-        while(lp != rp){
-            // case1
-            if(list.get(lp) + list.get(rp) == target){
-                return true;
-            }
-            else if(list.get(lp) + list.get(rp) < target){
-                lp=(lp+1) % n;
-            }else{
-                //case3
-                rp = (n+rp-1) % n ;
-            }
-        }
+//         while(lp != rp){
+//             // case1
+//             if(list.get(lp) + list.get(rp) == target){
+//                 return true;
+//             }
+//             else if(list.get(lp) + list.get(rp) < target){
+//                 lp=(lp+1) % n;
+//             }else{
+//                 //case3
+//                 rp = (n+rp-1) % n ;
+//             }
+//         }
         
-        return false;
-    }
+//         return false;
+//     }
 
     
-    public static void main(String args[]){
-        ArrayList<Integer> list = new ArrayList<>();
+//     public static void main(String args[]){
+//         ArrayList<Integer> list = new ArrayList<>();
 
-            list.add(11);
-            list.add(15);
-            list.add(6);
-            list.add(8);
-            list.add(9);
-            list.add(10);
+//             list.add(11);
+//             list.add(15);
+//             list.add(6);
+//             list.add(8);
+//             list.add(9);
+//             list.add(10);
             
-        int target = 16;
+//         int target = 16;
             
-        System.out.println(pairsum2(list,target));
-    }
-}
+//         System.out.println(pairsum2(list,target));
+//     }
+// }
 
 
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//HOME WORK :- three sum using Arraylists
+
+// import java.util.*;
+// public class Main{
+//     public static ArrayList<ArrayList<Integer>> threesum(int arr[]){
+
+//         ArrayList<ArrayList<Integer>> result = new  ArrayList<> ();
+
+//         for(int i = 0 ; i < arr.length ; i++){
+
+//             for(int j = i+1 ; j < arr.length ; j++){
+
+//                 for(int k = j+1 ; k < arr.length ; k++){
+//                     ArrayList<Integer> triplet = new ArrayList<>();
+//                     if(arr[i]+arr[j]+arr[k] == 0){
+                        
+//                         triplet.add(arr[i]);
+//                         triplet.add(arr[j]);
+//                         triplet.add(arr[k]);
+//                         Collections.sort(triplet);
+//                         result.add(triplet);
+//                     }
+                    
+                    
+//                 }
+//             }
+//         }
+
+//         result = new ArrayList<ArrayList<Integer>>(new LinkedHashSet<ArrayList<Integer>> (result));
+//         return result;
+
+
+//     }
+//     public static void main(String args[]){
+
+//         int nums[] = {-1, 0,  1, 2, -1, -4};   
+
+//         System.out.println(threesum(nums));
+        
+//     }
+// }
 
 
 

@@ -520,10 +520,11 @@ public class Arrays{
 //         for (int i = 0 ; i < arr.length ; i++){
 
 //             cs = cs + arr[i];
+//              ms = Math.max(cs,ms);
 //             if (cs < 0){
 //                 cs = 0;
 //             }
-//             ms = Math.max(cs,ms);
+//             
 //         }
 
 //         System.out.println("MAX SUM IS:" + ms);
@@ -533,7 +534,7 @@ public class Arrays{
 
 //         Scanner sc = new Scanner (System.in);
 
-//         int arr[] = {-2,-3,4,-1,-2,1,5,-3};
+//         int arr[] = {-2,-3,-1,-2,-3};
 
 //         print_maxsum_subarrays(arr);
 
@@ -788,6 +789,81 @@ public class Arrays{
 
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Apna Collage Dsa Sheet.
+
+
+
+// Majority element Most Optimized (Moore's voting algorithm)
+
+// public class Arrays_practise{
+
+//     public static void majority(int nums[]){
+//         int freq= 0 ;
+//        int ans=0;
+//        for(int i = 0 ; i< nums.length ; i++){
+//             if(freq == 0){
+//                 ans = nums[i];
+//             }
+//             if(nums[i] == ans){
+//                 freq++;
+//             }else{
+//                 freq--;
+//             }
+//        }
+
+
+//        int count = 0;
+//        for(int i = 0 ; i < nums.length ; i++){
+//         if(nums[i] == ans){
+//             count++;
+//         }
+//        }
+//        if(count > nums.length/2){
+//         System.out.println(ans);
+//        }else{
+//         System.out.println("not exist");
+//        }
+       
+
+//     }
+
+//     public static void main(String args[]){
+
+//         int nums[] = {1,2,2,1,1};
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
 
 
 
