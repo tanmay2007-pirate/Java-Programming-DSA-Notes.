@@ -15,7 +15,7 @@
 //             System.out.print("Odd");
 //         }
 //     }
-    
+
 
 //     public static void main(String args[]){
 
@@ -421,3 +421,101 @@
 
 //     }
 // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Practise Questions
+
+// Q2 - Swap two numbers without using any third variable.
+
+// yes we can do it using xor properties
+
+
+// public class bit_Manupulation {
+//     public static void main(String args[]){
+
+//         int a = 5;
+//         int b = 10;
+
+//         System.out.println("Before swapping :- " + a);
+//         System.out.println("Before swapping :- " + b);
+
+//         a = a^b;
+//         b = a^b;
+//         a = a^b;
+
+//         System.out.println("After swapping :- " + a);
+//         System.out.println("After swapping :- " + b);
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Q3 :- Add 1 to an integer using Bit Manipulation.
+
+
+// public class bit_Manupulation{
+
+//     public static void addOne(int n){
+
+//         System.out.println(-~n);
+
+//     }
+//     public static void main(String args[]){
+
+//         int a = 20;
+
+//         addOne(a);
+
+//     }
+// }
+
+
+
+
+
+
+
+
+
+
+
+// Q4 :-Convert uppercase characters to lowercase using bits.
+
+
+// public class bit_Manupulation{
+
+//     public static void toLowerCase(char c){
+
+//         char lower = (char)(c | ' ');
+//         System.out.println(lower);
+
+//     }
+//     public static void main(String args[]){
+
+//         char c = 'B';
+
+//         toLowerCase( c);
+
+//     }
+// }
+
