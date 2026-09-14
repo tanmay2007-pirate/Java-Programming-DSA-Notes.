@@ -205,7 +205,7 @@ public class hollow{
 
         int min = minsearch(arr);
 
-        if(arr[min] <= target  && arr[min] <= arr[arr.length - 1] ){
+        if(arr[min] <= target  && target <= arr[arr.length - 1] ){
             return search(arr , min , arr.length-1,target);
         }else{
             return search(arr, 0 , min ,target);
